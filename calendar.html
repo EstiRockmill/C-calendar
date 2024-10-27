@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang='en'>
+  <head>
+    <meta charset='utf-8' />
+    <script src='https://cdn.jsdelivr.net/npm/fullcalendar@6.1.15/index.global.min.js'></script>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+          loadCalendar();
+        });
+
+        function loadCalendar() {
+          axios.get("https://eventsapi.onrender.com/api/Events").then((res) => {
+            var calendarEl = document.getElementById("calendar");
+            calendarEl.innerHTML = ""; // ריקון הקלנדר הקודם
+            var calendar = new FullCalendar.Calendar(calendarEl, {
+              initialView: "dayGridMonth",
+              events: res.data,
+            });
+            calendar.render();
+          });
+        }
+
+        function addEvent(){
+            const event = { title: "", start: "" };
+            event.title = prompt("Enter the event title");
+            event.start = prompt("Enter the date of the event (YYYY-MM-DD)");
+            axios.post("https://eventsapi.onrender.com/api/Events", event).then(() => {
+              loadCalendar();
+            });
+        }
+
+        function updateEvent(){
+            const id = prompt("Enter the event ID");
+            const event = { title: "", start: "", end: "10/10/2024" };
+            event.title = prompt("Enter the updated event title");
+            event.start = prompt("Enter the updated start date (YYYY-MM-DD)");
+            axios.put(`https://eventsapi.onrender.com/api/Events/${id}`, event).then(() => {
+              loadCalendar();
+            });
+        }
+
+        function deleteEvent(){
+            const id = prompt("Enter the event ID to delete");
+            axios.delete(`https://eventsapi.onrender.com/api/Events/${id}`).then(() => {
+              loadCalendar();
+            });
+        }
+    </script>
+  </head>
+  <body>
+    <button onclick="addEvent()">Add Event</button>
+    <button onclick="updateEvent()">Update Event</button>
+    <button onclick="deleteEvent()">Delete Event</button>
+    <div id='calendar'></div>
+  </body>
+</html>
