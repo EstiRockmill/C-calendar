@@ -1,0 +1,11 @@
+{
+  "version": 2,
+  "dgSpecHash": "RllIvS5BlRc=",
+  "success": true,
+  "projectFilePath": "D:\\Users\\User\\Desktop\\שנה ב\\C#\\dentalClinic\\dentalClinic\\dentalClinic.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\User\\.nuget\\packages\\microsoft.aspnetcore.app.ref\\3.0.1\\microsoft.aspnetcore.app.ref.3.0.1.nupkg.sha512",
+    "C:\\Users\\User\\.nuget\\packages\\microsoft.netcore.app.host.win-x64\\3.0.3\\microsoft.netcore.app.host.win-x64.3.0.3.nupkg.sha512"
+  ],
+  "logs": []
+}

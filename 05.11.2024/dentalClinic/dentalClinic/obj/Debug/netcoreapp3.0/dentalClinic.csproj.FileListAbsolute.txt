@@ -1,0 +1,5 @@
+D:\Users\User\Desktop\שנה ב\C#\dentalClinic\dentalClinic\obj\Debug\netcoreapp3.0\dentalClinic.GeneratedMSBuildEditorConfig.editorconfig
+D:\Users\User\Desktop\שנה ב\C#\dentalClinic\dentalClinic\obj\Debug\netcoreapp3.0\dentalClinic.AssemblyInfoInputs.cache
+D:\Users\User\Desktop\שנה ב\C#\dentalClinic\dentalClinic\obj\Debug\netcoreapp3.0\dentalClinic.AssemblyInfo.cs
+D:\Users\User\Desktop\שנה ב\C#\dentalClinic\dentalClinic\obj\Debug\netcoreapp3.0\dentalClinic.csproj.CoreCompileInputs.cache
+D:\Users\User\Desktop\שנה ב\C#\dentalClinic\dentalClinic\obj\Debug\netcoreapp3.0\dentalClinic.MvcApplicationPartsAssemblyInfo.cache
